@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path');
 const app = express()
-const port = 8000
+const port = 8000 || process.env.PORT
 
 const fileName = "slovak-nameday-list.json";
 
@@ -10,5 +10,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`Server running on port ${port}`)
 })
